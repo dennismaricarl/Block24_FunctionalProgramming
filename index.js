@@ -95,6 +95,8 @@ console.log(reversedAnimals)
     // first function - 
         // takes speed and name
         // return an array, value:pairs? 
+        //generate speed how? 
+
 
     // second function - 
         // takes runner1, runner2, and race distance
@@ -102,12 +104,20 @@ console.log(reversedAnimals)
         // if speed and distance are greater, return that runner
         // if equal, return 'It's a tie'
 
-runners = [];
-const function1 = (speed, name) => {
-    runners = [];
-    name.map()
+runners = ["mari", "vivian", "jnae", "alice"];
+// const mapped_runners = runners.map(runners => {return runners});
+// console.log(mapped_runners)
+const function1 = () => {
+    const speed = Math.random();
+    const random_name_index = Math.floor(Math.random() * runners.length);
+    const name = runners[random_name_index]
+    return {speed, name}
 }
 
+const randomRunner = function1();
+console.log(randomRunner)
+
+// const function2 = 
 
 //TAB 3: CURRYING FUNCTION
 
