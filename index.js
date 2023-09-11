@@ -17,12 +17,11 @@ console.log(word_in_uppercase);
 
 
 //#2 
- //create a variable 
- //assign a function to that variable that takes "inputNumber"
- //that function will return another function that multiplies inputNumber with number 
+    //create a variable 
+    //assign a function to that variable that takes "inputNumber"
+    //that function will return another function that multiplies inputNumber with number 
+    //do partially apply 
 
-//do partially apply 
-//get a function that will call the next product 
 
 const multiplyNumbers = (inputNumber) => (number) => {
     return inputNumber * number
@@ -35,34 +34,26 @@ const product = input_number(7);
 console.log(product)
 
 //#3
+const ObjectReturned = (num1, num2) => {
+    const result1 = num1 + 2
+    const result2 = num2 + 4
+    const object = {
+        result1: result1, 
+        result2: result2
+    }
 
-// const ObjectReturned = () => (num1, num2) => {
-//     const result1 = num1;
-//     const result2 = num2;
-//     const object = {
-//         result1: result1, 
-//         result2: result2
-//     }
+    return object;
+};
 
-//     return object;
-// };
+const result = ObjectReturned(1, 3)
+console.log(result)
 
-
-// const myObjectReturned = ObjectReturned();
-// const add2 = myObjectReturned() 
-// const 
-// const results = myObjectReturned(add2, add4)
-
-
-// console.log(results )
 
 //TAB2: HIGHER-ORDER FUNCTION 
-
-
-//write array
-//function that takes array 
-//and modify each element in the input 
-//return a new array with modified elements
+    //write array
+    //function that takes array 
+    //and modify each element in the input 
+    //return a new array with modified elements
 
 //#1
 const animals  =  ['Hippopotamus', 'King Cobra', 'Giant Panda', 'Crocodile'];
@@ -75,7 +66,7 @@ console.log(mappedArray)
 
 //#2
     //write array
-    //create variable, equal to funciton
+    //create variable, equal to function
     //use .map to iterate through list 
     //use if statement to find string that has more than 11 characs
     //return that item
@@ -94,28 +85,28 @@ console.log(moreThan11);
     //create function that takes a string 
     //use map to iterate over each item in array
     //split the string, reverse the order, and join back together
-    //use reverStrings function and pass animals ? 
+
 const reverseStrings = (animals) => animals.map((animal) => animal.split('').reverse().join(''));
 
 const reversedAnimals = reverseStrings(animals)
 console.log(reversedAnimals)
 
 //#4
-    //first function - 
-        //takes speed and name
-        //return an array, value:pairs? 
+    // first function - 
+        // takes speed and name
+        // return an array, value:pairs? 
 
-    //second function - 
-        //takes runner1, runner2, and race distance
-        //whoever is faster and has greater distance is winner 
-            //if speed and distance are greater, return that runner
-            //if equal, return 'It's a tie'
+    // second function - 
+        // takes runner1, runner2, and race distance
+        // whoever is faster and has greater distance is winner 
+        // if speed and distance are greater, return that runner
+        // if equal, return 'It's a tie'
 
-// runners = [];
-// const function1 = (speed, name) => {
-//     runners = [];
-//     name.map()
-// }
+runners = [];
+const function1 = (speed, name) => {
+    runners = [];
+    name.map()
+}
 
 
 //TAB 3: CURRYING FUNCTION
@@ -131,18 +122,6 @@ console.log(reversedAnimals)
     //divide function into several ones. each will take one parameter
     //return will concatenate/add every part of the URL 
     //call by putting arguments side by side ()()()
-
-// function add(protocol){
-//     return function (subdomain) {
-//         return function (domain){
-//             return function (topLevel) {
-//                 return function (endpoint) {
-//                     return protocol + subdomain + '.' + domain + '.' + topLevel + endpoint;
-//                 }
-//             }
-//         }
-//     }
-// };
 
 const add = (protocol) => (subdomain) => (domain) => (topLevel) => (endpoint) =>
     `${protocol}${subdomain}.${domain}.${topLevel}${endpoint}`;
